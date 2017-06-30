@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body ng-app="newsWeb">
+    <!-- top nav-->
+    <nav class="top-nav">
+        <div class="left">
+            <div class="logo"><a href="javascript:void(0);">BRUSHED</a></div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="javascript:void(0);">HOME</a></li>
+                <li><a href="javascript:void(0);">OUR WORK</a></li>
+                <li><a href="javascript:void(0);">ABOUT US</a></li>
+                <li><a href="javascript:void(0);">CONTACT</a></li>
+                <li><a href="javascript:void(0);">SHORTCODES</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--news container-->
+    <div class="news-container">
+        <div ng-controller="tabCtrl" class="news-tab" >
+            <ul ng-show="flag">
+                <li><a href="#资讯新闻">资讯新闻</a></li>
+                <li><a href="#财经新闻">财经新闻</a></li>
+                <li><a href="#娱乐新闻">娱乐新闻</a></li>
+                <li><a href="#体育新闻">体育新闻</a></li>
+                <li><a href="#房产新闻">房产新闻</a></li>
+                <li><a href="#科技新闻">科技新闻</a></li>
+                <li><a href="#游戏新闻">游戏新闻</a></li>
+                <li><a href="#军事新闻">军事新闻</a></li>
+            </ul>
+        </div>
+        <div class="news-main" ng-view>
+           
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./assets/js/prefixfree.min.js"></script>
+<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="../node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="./service/mjsonp.js"></script>
+<script type="text/javascript" src="./details/details.js"></script>
+<script type="text/javascript" src="./news_list/news_list.js"></script>
+<script type="text/javascript" src="./app.js"></script>
+</html>

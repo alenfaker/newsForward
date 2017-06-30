@@ -1,0 +1,14 @@
+<ul class="pubool clearfix">
+    <li ng-repeat ="item in newsLis">
+        <div class="lisPic">
+            <div class="pic">
+                <img src="{{item.imgArr}}" alt="">
+            </div>
+            <div class="info">
+                <h3>{{item.title}}</h3>
+                <p>{{item.describes}}</p>
+                <div class="more clearfix"><a ng-click="returnF()" href="#webnewsdetail{{item.date}}">查看详情</a><span>{{date|date:"yyyy-MM-dd"}}</span></div>
+            </div>
+        </div>
+    </li>
+</ul>

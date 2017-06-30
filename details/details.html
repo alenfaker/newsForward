@@ -1,0 +1,29 @@
+<div class="news-detail">
+    <div class="nav-bar">
+        <a href="#财经新闻">首页</a>/<a href="#webnewsdetail{{detailsMore.date}}">{{detailsMore.title}}</a>
+    </div>
+    <div class="main-detail clearfix">
+        <div class="content">
+            <h3>{{detailsMore.title}}</h3>
+            <div class="mark">
+                <p class="author">作者:{{detailsMore.uname}} </p>
+                <p class="time">发表时间:{{date|date:"yyyy-MM-dd"}} </p>
+            </div>
+            <div class="main-content">
+                <div class="pic"><img src="{{detailsMore.imgArr}}" alt=""></div>
+                <div class="words">{{detailsMore.describes}}</div>
+            </div>
+        </div>
+        <div class="recomand">
+            <h3>你可能喜欢的新闻</h3>
+            <ul class="maylk">
+                <li ng-repeat="item in mayLike">
+                    <a href="#webnewsdetail{{item.date}}">
+                    {{item.title}}
+                    </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
